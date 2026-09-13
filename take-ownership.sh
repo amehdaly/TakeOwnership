@@ -19,7 +19,7 @@ run_sudo() {
 }
 
 if ! run_sudo chown -R "$user:$user" -- "$folder" || \
-   ! run_sudo chmod 755 -- "$folder"; then
+    ! run_sudo chmod -R 755 -- "$folder"; then
     kdialog --error "Could not update permissions for:\n$folder"
     exit 1
 fi
