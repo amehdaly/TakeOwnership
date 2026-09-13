@@ -8,4 +8,4 @@ X-KDE-ServiceTypes=KonqPopupMenu/Plugin
 [Desktop Action TakeOwnership]
 Name=Take Ownership
 Icon=security-high
-Exec=/mnt/F/code/Automation/TakeOwnership/take-ownership.sh
+Exec=/mnt/F/code/Automation/TakeOwnership/take-ownership.sh %f

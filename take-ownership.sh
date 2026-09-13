@@ -4,10 +4,14 @@ set -o errexit
 set -o nounset
 set -o pipefail
 
-folder=$(kdialog --getexistingdirectory "$HOME" --title "Choose folder") || exit 0
+if (( $# > 0 )); then
+    folder=$1
+else
+    folder=$(kdialog --getexistingdirectory "$HOME" --title "Choose folder") || exit 0
+fi
 
 if [[ -z "$folder" || ! -d "$folder" ]]; then
-    kdialog --error "The selected folder is not valid."
+    kdialog --error "The selected folder is not valid:\n$folder"
     exit 1
 fi
 
