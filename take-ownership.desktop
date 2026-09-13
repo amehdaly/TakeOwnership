@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Service
+Name=Take Ownership
+MimeType=inode/directory;
+Actions=TakeOwnership;
+X-KDE-ServiceTypes=KonqPopupMenu/Plugin
+
+[Desktop Action TakeOwnership]
+Name=Take Ownership
+Icon=security-high
+Exec=/mnt/F/code/Automation/TakeOwnership/take-ownership.sh
